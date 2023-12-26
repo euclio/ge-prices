@@ -11,9 +11,12 @@ repositories {
 }
 
 def runeLiteVersion = 'latest.release'
+def jacksonVersion = '2.16.0'
 
 dependencies {
 	compileOnly group: 'net.runelite', name:'client', version: runeLiteVersion
+	implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: jacksonVersion
+	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: jacksonVersion
 
 	compileOnly 'org.projectlombok:lombok:1.18.30'
 	annotationProcessor 'org.projectlombok:lombok:1.18.30'
